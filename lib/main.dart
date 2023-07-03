@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   void scanQr () async{
     String cameraScanResult = await scanner.scan();
     setState((){
-
+      qrValue = cameraScanResult;
     });
   }
   MyApp({super.key});
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
               ),
               floatingActionButton: FloatingActionButton(
                 backgroundColor: Colors.red,
-                onPressed: () => ,
+                onPressed: () => scanQr(),
                 child: Icon(
                   Icons.camera
                 ),
