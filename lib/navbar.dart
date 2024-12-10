@@ -13,8 +13,8 @@ class _navBarState extends State<navBar> {
     return Drawer(
       child: ListView(children: [
         UserAccountsDrawerHeader(
-          accountName: Text('Johan Pavòn'),
-          accountEmail: Text('jas.pavon@yavirac.edu.ec'),
+          accountName: Text('Daniela Morocho'),
+          accountEmail: Text('dgc.morocho.edu.ec'),
           currentAccountPicture: CircleAvatar(
               child: ClipOval(child: Image.asset('images/icon.jpg'))),
         ),

@@ -11,12 +11,13 @@ import 'package:qrscan/qrscan.dart' as scanner ;
 
 void main() => runApp(MyApp());
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
   String qrValue = "Codigo Qr";
   void scanQr () async{
-    String cameraScanResult = await scanner.scan();
+    String? cameraScanResult = await scanner.scan();
     setState((){
-      qrValue = cameraScanResult;
+      qrValue = cameraScanResult!;
     });
   }
   MyApp({super.key});
@@ -72,4 +73,6 @@ class MyApp extends StatelessWidget {
               
     );
   }
+  
+  void setState(Null Function() param0) {}
 }
